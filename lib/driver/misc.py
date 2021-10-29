@@ -104,3 +104,21 @@ async def change_volume(client, message):
         await message.reply(f"**Volume changed to:** ```{range}%```")
     except Exception as e:
         await message.reply(f"**Error:** {e}")
+
+
+@Client.on_message(filters.command(["id", "ids"]))
+@blacklist_users
+async def id(client, message):
+    input = " ".join(message.command[1:])
+    replied = message.reply_to_message
+    if replied:
+        user_id = replied.from_user.id
+        user = await client.get_users(user_id)
+        mention = user.mention
+    elif input.startswith("@")
+        user = await client.get_users(input)
+        user_id = user.id
+        mention = user.mention
+    else:
+        pass
+    await message.reply(f"**User:** {mention}\n**Id:** {user_id}")
