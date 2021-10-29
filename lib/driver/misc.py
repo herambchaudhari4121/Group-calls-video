@@ -118,10 +118,10 @@ async def id(client, message):
         try:
            input = " ".join(message.command[1:])
            user = await client.get_users(input)
-           user_id = user.id
-           mention = user.mention
         except BaseException:
            pass
+        user_id = user.id
+        mention = user.mention
     else:
         pass
     await message.reply(f"**User:** {mention}\n**Id:** {user_id}")
