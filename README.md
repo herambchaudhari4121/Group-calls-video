@@ -1,4 +1,4 @@
-# tg-stream-video
+# Tg-Stream-Video
 
 ![logo](https://telegra.ph/file/824cba85b5b820fcd7dcd.jpg)
 ## Deploy
